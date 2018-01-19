@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{grffile}
 \usepackage{longtable}
+\usepackage{booktabs}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
@@ -28,7 +29,7 @@
  pdftitle={WHO$_2$CARES - Mission Proposal},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.5.1 (Org mode 9.0.8)}, 
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.8)}, % No advertising! I use vim! =)
  pdflang={English}}
 \begin{document}
 
@@ -279,7 +280,7 @@ Sensing Satellite (ERS-1/2) and the Environmental Satellite (Envisat). Those are
 the Moderate Resolution imaging Spectroradiometer (MODIS), the Along-Track
 Scanning Radiometers (ATSR-1/2) and the Advanced Along-Track Scanning Radiometer
 (AATSR), which provide an increased number of spectral channels as well as
-higher spatial resolution (≤ 1 km footprint size) than AVHRR. The MODIS and
+higher spatial resolution ($\leq$ 1 km footprint size) than AVHRR. The MODIS and
 ATSR/AATSR sensors include the spectral channels of AVHRR but have additional
 ones in the visible, near-infrared and, in the case of MODIS, also in the
 thermal infrared. In addition, they have an increased spatial resolution as well
@@ -481,7 +482,8 @@ orbit. We suggest a scheme of satellites motion when all parts of the fleet move
 in pairs with a constant distance between partners – d=200 km. In this case
 fields of view of two detectors in pair overlap (\textasciitilde{}200x400 km) and provide
 continuous observation of the underlying part of the atmosphere from two orbital
-points (Fig. 1). The optical measurement principle is depicted in Fig. 2. The
+points (Fig.~\ref{fig:eng_fig_}). The optical measurement principle is depicted
+in Fig.~\ref{fig:eng_fig_2}. The
 idea is to use to detector in order to cover the spectral range from 165 nm to
 1800 nm. The first detector will be a standard 2048 x 2048 pixels wide CCD or
 CMOS in order to cover the UV-VIS spectral range (165 nm - 1100 nm) and a 2048 x
@@ -499,13 +501,115 @@ and hence are suitable for remote sensing applications [2].
 \centering
 \includegraphics[width=0.6\textwidth]{img/eng_fig_1}
 \caption{Overlapping of the field of views of two detectors in pair.}
+\label{fig:eng_fig_1}
 \end{figure}
 
 \begin{figure}[hbpt]
 \centering
 \includegraphics[width=\textwidth]{img/eng_fig_2}
 \caption{Overlapping of the field of views of two detectors in pair.}
+\label{fig:eng_fig_2}
 \end{figure}
+
+\subsection{Overall design}
+\label{sec:overalldesign}
+
+In term of energy, the power budget of our CubeSat in the worst case scenario is
+summarized in table~\ref{tab:powerbudget} assuming a sun-synchronous orbit and a
+continuous acquisition and transmission of data. A margin of 20~\% is assumed.
+The energy is supply thanks to both solar PV and batteries, giving up a power of
+\SI{3500}{mW}.
+
+\begin{table}
+    \centering
+    \caption{Power Budget of a \whocares nanosatellite in the worst case
+    scenario.}
+    \begin{tabular}{lScS}
+        \toprule
+        Subsystem               & {Power (mW)} & On-time (min) & {Energy use (mWh)}\\
+        \midrule
+        OBC                     & 400        & 98            & 653.33\\
+        Beacon                  & 1200       & 30            & 600\\
+        Receiver                & 176        & 60            & 176\\
+        Transmitter             & 1200       & 60            & 1200\\
+        ADCS                    & 220        & 90            & 330\\
+        CCD/CMOS                & 400        & 98            & 653.33\\
+        CCD/CMOS                & 400        & 98            & 653.33\\
+        \midrule
+        Average usage per orbit &            &               & 4266\\
+        Minimum array power     & 3500       & 90            & 5250\\
+        \midrule
+        Total                   &            &               & 984\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:powerbudget}
+\end{table}
+
+Although it is too early at this stage to have a complete view of the exact
+design of a \whocares nanosatellite, as our mission instrument only consist of two
+passive cameras, it is reasonable to consider that the total size of our CubeSat
+should not exceed 2 U. A summary of the payload mass and size is presented in
+table~\ref{tab:payload}. A crude estimation of the final mass is then about
+\SI{1600}{g}.
+
+\begin{table}
+    \centering
+    \caption{Mass and size budget of a WHO$_2$CARES nanosatellite.}
+    \begin{tabular}{lcS}
+        \toprule
+        Subsystem      & size (mm)          & {mass (g)}\\
+        \midrule
+        Solar PV       & Folded, thin < 8mm & 100\\
+        EPS (+battery) & 95×90×15.4         & 400\\
+        OBC            & 96×90×12           & 100\\
+        Communication  & ?                 & 200\\
+        ADCS           & 90×96×30           & 120\\
+        CCD            & 50×50×50           & 200\\
+        CMOS           & 50×50×50           & 200\\
+        Structure (1U) & 100×100×113.5      & 110\\
+        \midrule
+        total mass     &                    & 1430\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:payload}
+\end{table}
+
+
+\section{Budget}
+
+%% TODO: complete it and write sentence
+
+
+\begin{table}
+    \centering
+    \caption{Overall budget of the \whocares mission.}
+    \begin{tabular}{l S S}
+        \toprule
+        Payload                        & {Minimal cost (€)} & {Maximal cost (€)} \\
+        \midrule
+        Structure                      & 5000 & 10000 \\
+        Energy Power Supply            &      &       \\
+        \hspace{.5cm}Solar panel       & 5500 & 17000 \\
+        \hspace{.5cm}EPS + Batterie    & 4500 & 8000  \\
+        Communication                  &      &       \\
+        \hspace{.5cm}Antenna           & ???? & ????  \\
+        \hspace{.5cm}Transceiver       & 6500 & 8500  \\
+        OBS                            & 3000 &       \\
+        ADCS                           & 5000 & 20000 \\
+        Instrumentation                &      &       \\
+        \hspace{.5cm}CCD               & 5000 & ????  \\
+        \hspace{.5cm}CMOS              & ???? & ????  \\
+        \hspace{.5cm}Mirrors and stuff &      &       \\
+        Launch                         & ???? & ????  \\
+        \midrule
+        Total for 1 nanosatellite      & 34500 &68500\\
+        Number of satellite & 90 & 150 \\
+        Total               & 3105000   & 10275000 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:budget}
+\end{table}
+
 
 \bibliographystyle{apalike}
 \bibliography{literature}  
