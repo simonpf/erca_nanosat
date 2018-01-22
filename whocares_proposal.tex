@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{grffile}
 \usepackage{longtable}
+\usepackage{booktabs}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
@@ -28,7 +29,7 @@
  pdftitle={WHO$_2$CARES - Mission Proposal},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.5.1 (Org mode 9.0.8)}, 
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.8)}, % No advertising! I use vim! =)
  pdflang={English}}
 \begin{document}
 
@@ -63,7 +64,7 @@ At first, it is pertinent to explore the existing state-of-the-art to discover
 how the visible-NIR has been observed in the past and how we can effectively
 build upon this great wealth of satellite EO data.
 
-\subsubsection{Hyperion (earth Observing-1)}
+\subsubsection{Hyperion (Earth Observing-1)}
 \label{sec:org37e5de5}
 
 Hyperion was a hyperspectral, high-resolution
@@ -195,8 +196,7 @@ by Planet Lab Inc.’s designs.
 
 \subsection{Cloud Observations}
 \label{sec:org850e761}
-
-
+\subsubsection{Why should we care about clouds?}
 Accurate information on cloud properties, types, and their spatial and temporal
 variation along the atmosphere is crucial for climate studies and models. Cloud
 representations vary among global climate models, and small changes in cloud
@@ -229,7 +229,7 @@ temperature may be pulled down toward the lower end of its predicted range.
 On the other hand, the opposite effect could happen and the upper end of the
 predicted range is also possible and the increasing of the warming cycle would
 be perpetuated.
-
+\subsubsection{Cloud types and their effects}
 The reason why clouds impact climate differently resides in their heights and
 thickness. On the one hand, stratus clouds hang low in the sky – usually within
 two kilometers of the Earth’s surface—and resemble a gray blanket covering
@@ -246,7 +246,7 @@ Finally, Cumulus clouds, they extend vertically high in the sky. They have
 sharply defined edges, may form alone, in lines or in clusters. Cumulus clouds
 can block sunlight, but also trap the Earth’s heat. Their net effect on warming
 depends on their heights and thicknesses.
-
+\subsubsection{Is global warming changing the cloud heights?}
 Also, global warming is expected to change the distribution and type of clouds.
 It is found that clouds are moving away from the equator as temperatures rise.
 Subtropical dry zones have also been expanding. Observed and simulated cloud
@@ -265,11 +265,10 @@ varying so much, it is thought \citep{clouds_soon} that it could take at least 1
 to spot any possible global effects of climate change. “All we can say at the
 moment is that the global trends in cloud heights, if they are there, are being
 swamped by El Niño – La Niña fluctuations”, “It will take a lot longer till we
-can tease out these long-term trends.”. In terms of clouds, many efforts have
-been dedicated to the retrieval of their properties and distribution along the
-atmosphere. Passive satellite imagers are the most widely used instruments for
-cloud retrievals as they provide long-term, global coverage at acceptable cost
-for the user. The Advanced Very High Resolution Radiometer (AVHRR), on board the
+can tease out these long-term trends.”. 
+\subsubsection{Clouds properties retrieval from satellite}
+In terms of clouds, many efforts have been dedicated to the retrieval of their properties and distribution along the atmosphere. Passive satellite imagers are the most widely used instruments for cloud retrievals as they provide long-term, global coverage at acceptable cost for the user. 
+The Advanced Very High Resolution Radiometer (AVHRR), on board the
 NOAA satellites since the end of the 1970s, has been a significant contributor
 to many global cloud climatologies. AVHRR with its four to six spectral channels
 allows the retrieval of key cloud properties by abutting pixels that assemble a
@@ -279,7 +278,7 @@ Sensing Satellite (ERS-1/2) and the Environmental Satellite (Envisat). Those are
 the Moderate Resolution imaging Spectroradiometer (MODIS), the Along-Track
 Scanning Radiometers (ATSR-1/2) and the Advanced Along-Track Scanning Radiometer
 (AATSR), which provide an increased number of spectral channels as well as
-higher spatial resolution (≤ 1 km footprint size) than AVHRR. The MODIS and
+higher spatial resolution ($\leq$ 1 km footprint size) than AVHRR. The MODIS and
 ATSR/AATSR sensors include the spectral channels of AVHRR but have additional
 ones in the visible, near-infrared and, in the case of MODIS, also in the
 thermal infrared. In addition, they have an increased spatial resolution as well
@@ -389,7 +388,28 @@ data provided by HICO can be used to observe changes in coastal and estuarine wa
 
 
 \subsection{Aerosols}
-\label{sec:org701d1e2}
+\label{sec:org850e761}
+\subsubsection{What are aerosols?}
+Aerosol is one of the most important component of earth’s atmosphere. Man activities are changing the earth’s atmosphere and composition and hence it changes the concentration and chemical composition of aerosols as well. Aerosols are solid or liquid particles suspended in the air, and those observed by satellite remote sensing are typically between about 0.05 and 10 microns in size. More accurately and scientifically, the term aerosol refers to both the particles and the medium in which they reside.  
+
+
+\subsubsection{Importance and Impact of aerosols on Earth's radiative balance}
+Aerosols play an important role in earth’s weather and climate. Most aerosols are brighter land or ocean, and cool the Earth by reflecting sunlight back to space. The sun provides the energy that drives earth’s climate, but not all of the energy that reaches the top of the atmosphere finds its way to the surface. That’s because aerosols-and clouds seeded by them-reflect about a quarter of the sun’s energy back to space. Different aerosols scatter or absorb sunlight to varying degrees, depending on their physical properties. Climatologists describe these scattering and absorbing properties as the “direct effect” of aerosols on Earth’s radiation field. Other very important effects of aerosols are includes: visibility reduction, health effects, acid deposition, climate effects and effect on the chemical composition of the earth’s atmosphere. According to Intergovernmental Panel on Climate Change (IPCC: 1996, 2002), in recent years, atmospheric aerosols, their radiative properties (IPCC: 1996, 2002), and their variability over time have become of major importance because of their impact on global climate. Interaction of aerosols with incoming solar radiation is of significant importance in radiative transfer modelling of propagation of solar radiation in earth’s atmosphere (Kato et al. 1997). Because of their temporal and spatial variability, long-term measurements at a large number of individual measuring sites are required (Gröbner, J, et al. 2004).
+
+Aerosol affects the weather and climate by scattering and absorbing incoming solar radiation and by their effect on the albedo. Aerosol data on global and local or regional scale is of significant importance for earth’s weather or climate numerical modelling. Many atmospheric scientists all around the world consider aerosols as the one of the largest uncertainties in today’s climate modelling. Because of all these reasons aerosol data is really important for climate modelling and Satellite remote sensing is one of the most popular and scientific way of collecting aerosol data on regional to global scales, it will improve our understanding of aerosol distribution in earth’s atmosphere. 
+
+\subsubsection{Aerosol satellite remote sensing}
+Because aerosols vary on many spatial and temporal scales and exhibit a (Veefkind et. al, 2001) diversity of environmental impacts, satellite remote sensing makes an essential and contribution to the study of airborne particles. Since the very first orbiting imagers began observing Earth, the scope of satellite data products has provided inspiration, qualitative indications, and increasingly, quantitative constraints on the regional and global influences aerosols exert. Major advances in this field have taken place in the last decade, providing better constraints on atmospheric processes, short-term forecasting, and climate modelling. Further advances can be expected from greater integration of satellite and sub-orbital data with models. To understand the impact of aerosols on earth’s climate, the variability and spatial distribution of aerosols should be accurately known. Only satellite remote sensing has the potential to measure the highly variable aerosols field on global scale during longer periods (IPCC, 1996).
+
+\subsubsection{Aerosol: Satellite sensors}
+There are many satellite instruments that measures aerosol in UV/Visible range.  Some of the major existing satellite instruments are: (1) GOME-Global ozone monitoring experiment, it’s a UV/Visible grating spectrometer, with four bands ranges from UV to visible (240 to 790 nm). It’s main purpose is to measure various atmospheric chemical composition such as: BrO, CHOCHO, H2O, SO2 and aerosols etc. (2) SCIAMACHY (Scanning Imaging Absorption Spectrometer for Atmospheric Cartography). It’s a UV/VIS grating spectrometer, with 8 bands. Its mainly for atmospheric chemistry applications for measuring BrO, CHOCHO, H2O, SO2 and aerosols etc. (3) OMI (Ozone Monitoring Instrument), it’s a UV/VIS grating imaging spectrometer, with three bands (from 270 to 500 nm) Its mainly used for measuring aerosols, BrO and ozone profile.
+
+
+\subsubsection{A new approach: Hyper-spectral UV/Visible satellite measurements of Aerosols} 
+
+Satellite remote sensing of aerosol optical properties is the best possible over surfaces with a low and preferably constant albedo. Many aerosol properties such as: Aerosol particle size, Aerosol optical depth (AOD) etc. can be retrieved from satellite radiance measurements. By making assumptions about aerosol optical properties (size distribution, single scattering albedo and refractive index), aerosol optical depth can be retrieved from satellite radiance. Many different aerosol retrieval methods (Jalal K.A et. al 2015) are available in remote sensing literature such as: (1) AOD retrieval using Neural network (2) Multi-plane regression technique (with mean and standard deviation) method (3) Aerosol optical depth retrieval method based on RTM (Radiative Transfer Modelling) and Look Up Table (LUTs) (Torres et. al 1998). Existing satellite sensors such as: MODIS (with 36 channels in VIS and IR region) gives aerosol information mainly in visible region. Aerosol and it’s physical characteristics can be accurately characterized by increasing the number of spectral channels in UV/VIS region. The WHO2CARES, (a hyperspectral UV/VIS satellite instrument mission) will offer increased aerosol information. It will also be helpful in characterizing chemical composition and identifying different types of aerosols. 
+
+
 \section{Research Tools}
 \label{sec:org58312b2}
 
@@ -428,7 +448,7 @@ traditional methods, it is not possible to transmit data at this level.
 Because of this, it has been decided to use optical communication
 systems for this study.
 
-Optical communication systems use lasers to encode and transmit data
+Optical communication systems use lasers to encode and transmit data (Fig.~\ref{fig:eng_fig})
 with higher speed and density than RF-based communications. Smaller
 antennas, lower power requirements, and increased spectrum availability
 enable optical communications to be integrated into CubeSats more easily
@@ -440,6 +460,7 @@ satellites missions \citep{nasa_cube}.
 \includegraphics[width=0.8\linewidth]{img/eng_fig_3.png}
  \caption{Two-way CubeSat based optical communications setup. The
  transmitter (TX) and the receiver (RX) \citep{nasa_cube}}
+ \label{fig:eng_fig}
 \end{figure}
 
 In helio-synchroneous, one complete orbit taking 90 minutes. Our
@@ -450,6 +471,10 @@ and the ground station need to establish a data link and transfer the
 data. With optical communication we can transmit 25 MB/s data. The
 equation below is used to calculate the required ground based station
 number to transfer 1 TB/day for a satellite;
+
+\begin{equation}
+\frac{1 TB}{(25 \frac{MB}{s} \times 7.5 min \times 60 \frac{s}{min} \times \frac{1}{1024\times1024}\frac{TB}{MB} \times 16)} = 5.8 \sim 6
+\end{equation}
 
 ``Unlike radio communications, optical communications are interrupted by
 clouds. Therefore, any high availability laser communications system
@@ -469,43 +494,125 @@ storage on SD cards will be replaced on satellites.
 \subsection{Onboard Instruments}
 \label{sec:orgac81367}
 
-One of the main advantages of the Earth observation using nano satellites
-technique is a possibility of launching a fleet of satellites with similar
-onboard instruments. To achieve global coverage of the Earth surface every 3
-hours during \whocares mission a fleet of 90 nanosatellites is needed. Two
-spectrometers (for UV-VIS and IR spectral ranges) will be installed on each of
-them. Field of view of the instrument is 40° (\textasciitilde{}400x400 km on the surface of the
-Earth) with spatial resolution 0.2 km. For clouds 3D structure reconstruction,
-it is necessary to observe atmosphere in nadir from two different points on the
-orbit. We suggest a scheme of satellites motion when all parts of the fleet move
-in pairs with a constant distance between partners – d=200 km. In this case
-fields of view of two detectors in pair overlap (\textasciitilde{}200x400 km) and provide
-continuous observation of the underlying part of the atmosphere from two orbital
-points (Fig. 1). The optical measurement principle is depicted in Fig. 2. The
-idea is to use to detector in order to cover the spectral range from 165 nm to
-1800 nm. The first detector will be a standard 2048 x 2048 pixels wide CCD or
-CMOS in order to cover the UV-VIS spectral range (165 nm - 1100 nm) and a 2048 x
-2048 pixels CMOS-like IR-array (surely made from HgCdTe or InGaAs) to cover the
-NIR spectral range (800 nm – 1800 nm). The hyperspectrality will be ensured by
-using a Fabry-Pérot Fourier transform spectrometry technique to retrieve the
-spectral component [1,2]. This will allow to attain the wanted spectral
-resolution as well as the hyperspectrality by changing the Fabry-Pérot
-resonances and hence sweeping across the bandwidth. Furthermore, the Fabry-Perot
-interferometer can be much lighter and more compact than a conventional
-interferometer configuration such as Sagnac or Michelson interferometry designs
-and hence are suitable for remote sensing applications [2].
+One of the main advantages of the Earth observation using nano satellites technique is a possibility of launching a fleet of satellites with similar onboard instruments. To achieve global coverage of the Earth surface every 3 hours during \whocares mission a fleet of 90 nanosatellites is needed. Two spectrometers (for UV-VIS and IR spectral ranges) will be installed on each of them. Field of view of the instrument is 40° (\textasciitilde{}400x400 km on the surface of the Earth) with spatial resolution 0.2 km. 
+
+For clouds 3D structure reconstruction, it is necessary to observe atmosphere in nadir from two different points on the orbit. We suggest a scheme of satellites motion when all parts of the fleet move in pairs with a constant distance between partners – d=200 km. In this case fields of view of two detectors in pair overlap (\textasciitilde{}200x400 km) and provide continuous observation of the underlying part of the atmosphere from two orbital points (Fig.~\ref{fig:eng_fig_1}). 
+
+The optical measurement principle is depicted in Fig.~\ref{fig:eng_fig_2}. The idea is to use to detector in order to cover the spectral range from 165 nm to 1800 nm. The first detector will be a standard 2048 x 2048 pixels wide CCD or CMOS in order to cover the UV-VIS spectral range (165 nm - 1100 nm) and a 2048 x 2048 pixels CMOS-like IR-array (surely made from HgCdTe or InGaAs) to cover the NIR spectral range (800 nm – 1800 nm). The hyperspectrality will be ensured by using a Fabry-Pérot Fourier transform spectrometry technique to retrieve the spectral component \citep{khalil,lucey}. This will allow to attain the wanted spectral resolution (0.5~nm) as well as the hyperspectrality by changing the Fabry-Pérot resonances and hence sweeping across the bandwidth. Furthermore, the Fabry-Perot interferometer can be much lighter and more compact than a conventional interferometer configuration such as Sagnac or Michelson interferometry designs and hence are suitable for remote sensing applications \citep{lucey}.
 
 \begin{figure}[hbpt]
 \centering
 \includegraphics[width=0.6\textwidth]{img/eng_fig_1}
 \caption{Overlapping of the field of views of two detectors in pair.}
+\label{fig:eng_fig_1}
 \end{figure}
 
 \begin{figure}[hbpt]
 \centering
 \includegraphics[width=\textwidth]{img/eng_fig_2}
-\caption{Overlapping of the field of views of two detectors in pair.}
+\caption{Overlapping of the field of views of two detectors in pair \citep{spec_image}.}
+\label{fig:eng_fig_2}
 \end{figure}
+
+\subsection{Overall design}
+\label{sec:overalldesign}
+
+In term of energy, the power budget of our CubeSat in the worst case scenario is
+summarized in table~\ref{tab:powerbudget} assuming a sun-synchronous orbit and a
+continuous acquisition and transmission of data. A margin of 20~\% is assumed.
+The energy is supply thanks to both solar PV and batteries, giving up a power of
+\SI{3500}{mW}.
+
+\begin{table}
+    \centering
+    \caption{Power Budget of a \whocares nanosatellite in the worst case
+    scenario.}
+    \begin{tabular}{lScS}
+        \toprule
+        Subsystem               & {Power (mW)} & On-time (min) & {Energy use (mWh)}\\
+        \midrule
+        OBC                     & 400        & 98            & 653.33\\
+        Beacon                  & 1200       & 30            & 600\\
+        Receiver                & 176        & 60            & 176\\
+        Transmitter             & 1200       & 60            & 1200\\
+        ADCS                    & 220        & 90            & 330\\
+        CCD/CMOS                & 400        & 98            & 653.33\\
+        CCD/CMOS                & 400        & 98            & 653.33\\
+        \midrule
+        Average usage per orbit &            &               & 4266\\
+        Minimum array power     & 3500       & 90            & 5250\\
+        \midrule
+        Total                   &            &               & 984\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:powerbudget}
+\end{table}
+
+Although it is too early at this stage to have a complete view of the exact
+design of a \whocares nanosatellite, as our mission instrument only consist of two
+passive cameras, it is reasonable to consider that the total size of our CubeSat
+should not exceed 2 U. A summary of the payload mass and size is presented in
+table~\ref{tab:payload}. A crude estimation of the final mass is then about
+\SI{1600}{g}.
+
+\begin{table}
+    \centering
+    \caption{Mass and size budget of a WHO$_2$CARES nanosatellite.}
+    \begin{tabular}{lcS}
+        \toprule
+        Subsystem      & size (mm)          & {mass (g)}\\
+        \midrule
+        Solar PV       & Folded, thin < 8mm & 100\\
+        EPS (+battery) & 95×90×15.4         & 400\\
+        OBC            & 96×90×12           & 100\\
+        Communication  & ?                 & 200\\
+        ADCS           & 90×96×30           & 120\\
+        CCD            & 50×50×50           & 200\\
+        CMOS           & 50×50×50           & 200\\
+        Structure (1U) & 100×100×113.5      & 110\\
+        \midrule
+        total mass     &                    & 1430\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:payload}
+\end{table}
+
+
+\section{Budget}
+
+%% TODO: complete it and write sentence
+
+
+\begin{table}
+    \centering
+    \caption{Overall budget of the \whocares mission.}
+    \begin{tabular}{l S S}
+        \toprule
+        Payload                        & {Minimal cost (€)} & {Maximal cost (€)} \\
+        \midrule
+        Structure                      & 5000 & 10000 \\
+        Energy Power Supply            &      &       \\
+        \hspace{.5cm}Solar panel       & 5500 & 17000 \\
+        \hspace{.5cm}EPS + Batterie    & 4500 & 8000  \\
+        Communication                  &      &       \\
+        \hspace{.5cm}Antenna           & ???? & ????  \\
+        \hspace{.5cm}Transceiver       & 6500 & 8500  \\
+        OBS                            & 3000 &       \\
+        ADCS                           & 5000 & 20000 \\
+        Instrumentation                &      &       \\
+        \hspace{.5cm}CCD               & 5000 & ????  \\
+        \hspace{.5cm}CMOS              & ???? & ????  \\
+        \hspace{.5cm}Mirrors and stuff &      &       \\
+        Launch                         & ???? & ????  \\
+        \midrule
+        Total for 1 nanosatellite      & 34500 &68500\\
+        Number of satellite & 90 & 150 \\
+        Total               & 3105000   & 10275000 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:budget}
+\end{table}
+
 
 \bibliographystyle{apalike}
 \bibliography{literature}  
